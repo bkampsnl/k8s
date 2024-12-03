@@ -8,6 +8,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 brew install argocd
 kubectl apply -f argocd-ingress.yaml -n argocd
 echo "$(minikube ip) argocd.local" | sudo tee -a /etc/hosts
+argocd admin initial-password -n argocd
 
 # AWX
 helm repo add awx-operator https://ansible-community.github.io/awx-operator-helm/
