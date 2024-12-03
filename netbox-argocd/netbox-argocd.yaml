@@ -1,3 +1,4 @@
+# netbox-argocd.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -8,9 +9,12 @@ spec:
   source:
     repoURL: https://github.com/netbox-community/netbox-chart 
     targetRevision: main
-    path: netbox-argocd
-    directory:
-      recurse: true
+    chart: netbox
+    helm:
+      valueFiles:
+        - namespace.yaml
+        - values.yaml
+        - ingress.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: netbox
