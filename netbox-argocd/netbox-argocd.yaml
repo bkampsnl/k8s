@@ -8,7 +8,6 @@ spec:
   project: default
   source:
     repoURL: https://github.com/netbox-community/netbox-chart 
-    targetRevision: main
     chart: netbox
     helm:
       valueFiles:
