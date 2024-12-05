@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: ghcr.io/netbox-community/netbox-chart/netbox
     chart: netbox
+    targetRevision: devel
     helm:
       valueFiles:
         - namespace.yaml
