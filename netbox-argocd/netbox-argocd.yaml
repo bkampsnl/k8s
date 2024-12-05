@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: ghcr.io/netbox-community/netbox-chart/netbox
+    repoURL: https://charts.netbox.oss.netboxlabs.com/
     chart: netbox
-    targetRevision: devel
+    targetRevision: 5.0.0-beta.50 # Specificeer de gewenste versie
     helm:
       valueFiles:
         - namespace.yaml
