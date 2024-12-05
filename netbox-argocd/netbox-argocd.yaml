@@ -6,9 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/netbox-community/netbox-chart 
+    repoURL: ghcr.io/netbox-community/netbox-chart/netbox
     chart: netbox
-    targetRevision: master
     helm:
       valueFiles:
         - namespace.yaml
