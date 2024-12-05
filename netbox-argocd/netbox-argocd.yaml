@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: https://github.com/netbox-community/netbox-chart 
     chart: netbox
+    targetRevision: netbox-5.0.0-beta.155
     helm:
       valueFiles:
         - namespace.yaml
