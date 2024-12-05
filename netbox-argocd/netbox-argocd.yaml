@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://charts.netbox.oss.netboxlabs.com/
+  sources:
+  - repoURL: https://charts.netbox.oss.netboxlabs.com/
     chart: netbox
     targetRevision: 5.0.0-beta.50 # Specificeer de gewenste versie
     helm:
@@ -14,7 +14,7 @@ spec:
         - $values/netbox-argocd/namespace.yaml 
         - $values/netbox-argocd/values.yaml
         - $values/netbox-argocd/ingress.yaml
-    repoURL: https://github.com/bkampsnl/k8s.git 
+  - repoURL: https://github.com/bkampsnl/k8s.git 
     ref: values
   destination:
     server: https://kubernetes.default.svc
