@@ -11,9 +11,12 @@ spec:
     targetRevision: 5.0.0-beta.50 # Specificeer de gewenste versie
     helm:
       valueFiles:
-        - namespace.yaml
-        - values.yaml
-        - ingress.yaml
+        - $values/netbox-argocd/namespace.yaml 
+        - $values/netbox-argocd/values.yaml
+        - $values/netbox-argocd/ingress.yaml
+    repoURL: https://github.com/bkampsnl/k8s.git 
+    targetRevision: main 
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: netbox
