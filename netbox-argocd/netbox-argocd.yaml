@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/netbox-community/netbox-chart 
     chart: netbox
-    targetRevision: latest 
+    targetRevision: master
     helm:
       valueFiles:
         - namespace.yaml
