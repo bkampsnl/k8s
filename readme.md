@@ -22,3 +22,14 @@ helm repo add backstage https://backstage.github.io/charts
 kubectl create namespace backstage
 helm upgrade -i backstage backstage/backstage -n backstage
 echo "$(minikube ip) backstage.local" | sudo tee -a /etc/hosts
+
+# Cloudnativepg
+kubectl apply -f \
+  https://raw.githubusercontent.com/cloudnative-pg/cloudnative-pg/release-1.17/releases/cnpg-1.17.5.yaml
+kubectl get deploy -n cnpg-system cnpg-controller-manager
+
+# Netbox
+argocd app create netbox --repo https://github.com/bkampsnl/k8s --path netbox --dest-server https://kubernetes.default.svc --dest-namespace netbox 
+argocd app sync netbox
+
+
