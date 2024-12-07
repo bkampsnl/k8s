@@ -9,10 +9,10 @@ spec:
   - repoURL: https://charts.netbox.oss.netboxlabs.com/
     chart: netbox
     targetRevision: 5.0.0-beta.50 # Specificeer de gewenste versie
-    helm:
-      valueFiles:
-        - $values/netbox/values.yaml
-        - $values/netbox/ingress.yaml
+#    helm:
+#      valueFiles:
+#        - $values/netbox/values.yaml
+#        - $values/netbox/ingress.yaml
   - repoURL: https://github.com/bkampsnl/k8s.git 
     ref: values
   destination:
@@ -20,6 +20,6 @@ spec:
     namespace: netbox
   syncPolicy:
     automated:
-      prune: true
+#      prune: true
       selfHeal: true
 
