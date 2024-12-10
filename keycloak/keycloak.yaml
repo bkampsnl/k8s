@@ -5,10 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://charts.bitnami.com/bitnami
+  sources:
+  - repoURL: https://charts.bitnami.com/bitnami
     chart: keycloak
-    targetRevision: 24.2.3 # Specificeer de gewenste versie van de chart
+    targetRevision: 24.2.3 
     helm:
       values: |
         auth:

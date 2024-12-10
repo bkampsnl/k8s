@@ -29,7 +29,13 @@ kubectl apply -f \
 kubectl get deploy -n cnpg-system cnpg-controller-manager
 
 # Netbox
+helm repo add gitlab https://charts.gitlab.io/
 argocd app create netbox --repo https://github.com/bkampsnl/k8s --path netbox --dest-server https://kubernetes.default.svc --dest-namespace netbox 
 argocd app sync netbox
 
+# Keycloak
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
 
+argocd app create keycloak --repo https://github.com/bkampsnl/k8s --path keycloak  --dest-server https://kubernetes.default.svc --dest-namespace keycloak
+argocd app sync keycloak
