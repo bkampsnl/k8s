@@ -8,7 +8,7 @@ spec:
   sources:
   - repoURL: https://charts.bitnami.com/bitnami
     chart: keycloak
-    targetRevision: 24.2.3 # Vervang door de juiste versie of gebruik 'latest'
+    targetRevision: HEAD # Vervang door de juiste versie of gebruik 'latest'
     helm:
       values: |
         auth:
