@@ -13,9 +13,14 @@ spec:
       values: |
         auth:
           adminUser: admin
-          adminPassword: securepassword123
+          adminPassword: admin
         service:
           type: ClusterIP
+      valueFiles:
+       - $values/keycloak/namespace.yaml
+       - $values/keycloak/ingress.yaml
+  - repoURL: https://github.com/bkampsnl/k8s.git
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: keycloak
