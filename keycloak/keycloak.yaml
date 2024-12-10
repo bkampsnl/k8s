@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   sources:
-  - repoURL: https://charts.bitnami.com/bitnami
+  - repoURL: oci://registry-1.docker.io/bitnamicharts/keycloak
     chart: keycloak
     targetRevision: 24.2.3 # Vervang door de juiste versie of gebruik 'latest'
     helm:
