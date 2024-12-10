@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://charts.bitnami.com/bitnami
+  sources:
+  - repoURL: https://charts.bitnami.com/bitnami
     chart: keycloak
     targetRevision: latest # Vervang door de juiste versie of gebruik 'latest'
     helm:
